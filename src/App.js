@@ -9,7 +9,9 @@ function App() {
       <div style={{ display: 'flex', justifyContent: 'center', fontWeight: 'bold' }}> COUNTER : {count}</div>
       <div style={{ display: 'flex', justifyContent: 'center', columnGap: '10px' }}>
         <button type="button" onClick={() => setCount(count + 1)} > +1 </button>
-        <button type="button" onClick={() => setCount(count - 1)}> -1 </button>
+        <button type="button" onClick={() => setCount(count - 1)} disabled={count <= 0}> -1 </button>
+        <button type="button" onClick={() => setCount(count + 1)} > +5 </button>
+        <button type="button" onClick={() => setCount(count - 1)} disabled={count < 5}> -5 </button>
       </div>
     </div>
   );
